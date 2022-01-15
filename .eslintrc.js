@@ -15,6 +15,9 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
   },
 
+  // чтобы eslint не ругался, добавляем переменные,
+  // объявленные через webpack.DefinePlugin
+  // в globals
   globals: {
     MY_VARS: 'readonly'
   }

@@ -1,24 +1,14 @@
-# yt0010
+# Файлы к виде "Два способа работы с переменными окружения во Vue"
 
-## Project setup
-```
-npm install
-```
+[Ссылка на Youtube](https://youtu.be/_MB5-UzwPUg)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Добавлены переменные окружения через `.env`.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Также добавлены переменные окружения через `webpack.DefinePlugin`. Смотреть во `vue.config.js`.
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Измененные файлы: 
+* `.env`, `.env.development`, `.env.development.local` – в порядке приоритета от меньшего к большему. 
+* `vue.config.js` – изменяем `BASE_URL` и добавляем переменные окружения через `DefinePlugin`.
+* `.eslintrc.js` – добавляем переменные, объявленные в `vue.config.js` как `globals`
+* `@/views/Home.vue` – как обращаться к переменным окружения.
+* `package.json` – добавил пару скриптов для демонстрации запуска с другим модом и запуска с параметром.

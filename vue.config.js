@@ -4,6 +4,7 @@ const { argv } = require("yargs");
 const firstParam = argv.myparam === 1 ? 'some param' : 'other param';
 
 module.exports = {
+    publicPath: '/app',
     configureWebpack: {
         plugins: [
             new webpack.DefinePlugin(

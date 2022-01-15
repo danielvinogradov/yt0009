@@ -9,9 +9,14 @@
     name: 'Home',
     computed: {
       env() {
+        // это через файл .env
+        // + BASE_URL & NODE_ENV
         return process.env
       },
-      myvars() {
+      webpackVars() {
+        // пример доступа в компоненте
+        // обращаемся по имени, которое
+        // задали в webpack.DefinePlugin
         return MY_VARS
       }
     }
